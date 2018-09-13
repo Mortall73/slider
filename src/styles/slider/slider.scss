@@ -1,0 +1,74 @@
+.js-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    
+    
+    .js-slider-list {
+        white-space: nowrap;
+        font-size: 0;
+        position: relative;
+        transform: translateX(0);
+        transition: all 1s linear;
+    }
+
+    .js-slider-item {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    .js-slider-btn {
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        background-color: #3a3a3a;
+        border-radius: 2px;
+        bottom: 15px;
+        transition: background-color .2s;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten(#3a3a3a, 10%);
+        }
+
+        &--next {
+            right: 15px;
+            background-image: url('../../images/next.png');
+        }
+
+        &--prev {
+            left: 15px;
+            background-image: url('../../images/prev.png');
+        }
+
+        &--disable {
+            opacity: .5;
+
+            &:hover {
+                cursor: default;
+                background-color: #3a3a3a;
+            }
+        }
+
+    }
+}
+
+.js-slider-list {
+    &--bottom {
+        .js-slider-item {
+            vertical-align: bottom;
+        }
+    }
+    &--top {
+        .js-slider-item {
+            vertical-align: top;
+        }
+    }
+    &--middle {
+        .js-slider-item {
+            vertical-align: middle;
+        }
+    }
+}
