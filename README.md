@@ -1,7 +1,7 @@
 # slider
 
 Пример использования:
-
+```javascript
 new Slider('.slider', {
     sliders_to_scroll: 1,
     transition: 500,
@@ -18,3 +18,4 @@ options {
     transition - Number время скролла в милисек. (по умолчанию 1000 || 1s),
     slider_align - String выравнивание слайдов (по умолчанию bottom) : bottom, top, middle 
 }
+```
